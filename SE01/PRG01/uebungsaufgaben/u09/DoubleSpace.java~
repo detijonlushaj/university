@@ -1,0 +1,51 @@
+/** *Abgabeteam 03
+    *Aydin, Lushaj, Abdel Kader
+    *U24 Dateien lesen und schreiben*/
+import java.io.*;
+import java.util.Scanner;
+public class DoubleSpace {
+    /** main Methode: Aufruf der doubleSpace Methode*/
+    public static void main(String[] args) {
+        doubleSpace("inputText", "outputText");
+    }
+    
+    /** Parameter: 2 Strings */
+    public static void doubleSpace(String s1, String s2) {
+        Scanner input = null;
+        PrintStream output = null;
+        try {
+            input = new Scanner(new File(s1 + ".txt"));
+            output = new PrintStream(new File(s2 + ".txt"));
+            String string = null;
+        
+            String outputS = read(input);
+            System.out.print(outputS);
+            output.print(outputS);
+        
+            while (input.hasNextLine()) {
+                string = read(input);
+                output.print("\n\n" + string);
+                System.out.print("\n\n" + string);
+            }
+        
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            if (input != null) {
+                input.close();
+            }
+            if (output != null) {
+                output.close();
+            }
+        }
+    }
+    
+    /** *Parameter: Scanner
+        *returns String*/
+    public static String read(Scanner s) {
+        if (s.hasNextLine()) {
+            return s.nextLine();
+        }
+        return null;
+    }
+}

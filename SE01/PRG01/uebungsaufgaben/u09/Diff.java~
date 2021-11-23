@@ -1,0 +1,11 @@
+import java.io.*;
+import java.util.Scanner;
+public class Diff {
+    public static void main(String[] args) {
+        diff();
+    }
+    
+    public static void diff(String s1, String s2) {
+        
+    }
+}

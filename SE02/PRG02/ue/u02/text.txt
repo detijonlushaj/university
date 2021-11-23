@@ -1,0 +1,4 @@
+Name;Geburtsjahr;Lieblingsfarbe;Lieblingszahl
+Heinz;1973;blau;33,3
+Anne;1972;rot;9
+Hans;1969;gelb;1000,01

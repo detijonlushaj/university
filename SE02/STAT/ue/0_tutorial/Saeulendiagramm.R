@@ -1,0 +1,1 @@
+barplot(table(data_xls$Alter), xlab = "Alter", ylab = "Häufigkeit", main = "Häufigkeit des Alters", axis.lty = 1)

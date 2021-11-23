@@ -1,0 +1,10 @@
+package de.hsh.zahlenarraytest.Zeitmesser;
+
+public class Zeitmesser {
+    private String zeitmesser;
+    public void start() {
+        zeitmesser = "läuft";
+    }
+    
+    
+}

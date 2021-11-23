@@ -1,0 +1,19 @@
+package de.hsh.zahlenarraytest.Zeitmesser;
+
+public class Zeitmesser {
+    private String zeitmesser;
+    private long time = 0;
+    
+    public void start() {
+        zeitmesser = "läuft";
+        time = System.currentTimeMillis();
+    }
+    
+    public void stop() {
+        zeitmesser = "stop";
+    }
+    
+    public long getGemesseneGesamtzeit() {
+        return 
+    }
+}

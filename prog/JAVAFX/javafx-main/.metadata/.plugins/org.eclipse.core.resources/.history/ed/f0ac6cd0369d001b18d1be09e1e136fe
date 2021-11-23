@@ -1,0 +1,11 @@
+package de.hsh.zahlenarraytest.Zeitmesser;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Zeitmesser m = new Zeitmesser();
+        
+
+    }
+
+}

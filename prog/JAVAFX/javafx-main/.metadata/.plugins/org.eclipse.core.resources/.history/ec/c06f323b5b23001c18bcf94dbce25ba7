@@ -1,0 +1,38 @@
+package application;
+	
+import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+
+
+public class Main extends Application {
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+		    Scene1 scene1 = new Scene1(primaryStage);
+            Scene1 scene2 = new Scene1(primaryStage);
+	        	     	         	         
+            scene1.switchScene(scene2);
+            scene2.switchScene(scene1);    
+            
+	        TextField text = new TextField();
+	        text.setMaxWidth(100);
+	             
+	         
+	        primaryStage.setTitle("test scene switches");
+	        primaryStage.setScene(scene1.getScene());   
+	        primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

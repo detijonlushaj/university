@@ -1,0 +1,30 @@
+package application;
+	
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.control.TextField;
+
+
+public class Main extends Application {
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+		    Scene1 scene1 = new Scene1(primaryStage);
+            Scene2 scene2 = new Scene2(primaryStage);
+	        	     	         	           
+            
+	        TextField text = new TextField();
+	        text.setMaxWidth(100);
+	         
+	        primaryStage.setTitle("test scene switches");
+	        primaryStage.setScene(scene1.getScene());   
+	        primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

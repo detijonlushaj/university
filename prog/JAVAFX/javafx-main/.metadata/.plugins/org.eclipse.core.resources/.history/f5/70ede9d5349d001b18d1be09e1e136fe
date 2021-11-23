@@ -1,0 +1,8 @@
+package de.hsh.zahlenarraytest.Zeitmesser;
+
+public class Zeitmesser {
+    private boolean zeitmesser;
+    public void start() {
+        
+    }
+}

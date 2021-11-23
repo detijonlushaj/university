@@ -1,0 +1,7 @@
+package application;
+
+public class ScreenController {
+    public static void switchScene(Scene scene1) {
+        
+    }
+}

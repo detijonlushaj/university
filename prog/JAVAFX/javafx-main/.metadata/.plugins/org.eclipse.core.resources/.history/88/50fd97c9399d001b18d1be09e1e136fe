@@ -1,0 +1,29 @@
+package de.hsh.zahlenarraytest.Zeitmesser;
+
+public class Zeitmesser {
+    private String zeitmesser;
+    private long timeStart = 0;
+    
+    public void start() {
+        if (zeitmesser == "läuft") {
+            throw new IllegalArgumentException("Darf nicht beim Zeitmessen aufgerufen werden");
+        }
+        zeitmesser = "läuft";
+        timeStart = System.currentTimeMillis();
+    }
+    
+    public void stop() {
+        if (zeitmesser == "stoppt") {
+            throw new IllegalArgumentException("Es wurde schon gestoppt");
+        }
+        zeitmesser = "stop";
+        timeStop += System.currentTimeMillis() - time1;
+    }
+    
+    public long getGemesseneGesamtzeit() {
+        if (zeitmesser == "läuft") {
+            throw new IllegalArgumentException("Darf nicht beim Zeitmessen aufgerufen werden");
+        }
+        return time1;
+    }
+}

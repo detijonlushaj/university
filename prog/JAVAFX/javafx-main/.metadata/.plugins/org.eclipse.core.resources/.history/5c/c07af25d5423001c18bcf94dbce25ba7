@@ -1,0 +1,9 @@
+package application;
+
+import javafx.scene.Scene;
+
+public class ScreenController {
+    public static void switchScene(Stage stage, Scene scene) {
+        
+    }
+}

@@ -1,0 +1,16 @@
+package application;
+
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class SceneController {
+    Scene1 scene1 = new Scene1(primaryStage);
+    Scene2 scene2 = new Scene2(primaryStage);
+    public static void switchScene(Stage stage, Scene scene) {
+        stage.setScene(scene);
+    }
+    
+    public static void addScene() {
+        
+    }
+}

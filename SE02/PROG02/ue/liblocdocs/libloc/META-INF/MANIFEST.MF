@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: de.hsh.prog.klasseline.Loc
-Implementation-Version: 2019-12-11 16:12:13
-Specification-Vendor: Hochschule Hannover
-Specification-Title: Loc library
-Created-By: 1.8
-Specification-Version: 2019-12-11 16:12:13
-Implementation-Vendor: Hochschule Hannover
-

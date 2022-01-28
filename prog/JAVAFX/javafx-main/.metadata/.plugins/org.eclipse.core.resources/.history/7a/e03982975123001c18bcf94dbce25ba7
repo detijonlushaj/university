@@ -1,8 +1,0 @@
-.root {
-    -fx-background-color: #222222;
-}
-
-.text {
-    -fx-font-size: 20;
-    -fx-text-fill: "white";
-}

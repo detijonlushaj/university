@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HackerGradius:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HackerGradius_jar</output-path>
+    <root id="archive" name="HackerGradius.jar">
+      <element id="module-output" name="HackerGradius" />
+      <element id="library" level="project" name="src" />
+    </root>
+  </artifact>
+</component>

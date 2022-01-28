@@ -1,0 +1,17 @@
+1.) .h .c .h .h
+
+2.)kp
+
+3.) -P zeigt auf eine Adresse im Stack
+
+4.)
+996     d[0].n      1
+992     d[0].c      'a'
+988     d[1].n      3
+984     d[1].c      'b'
+980     v           'A'
+976     d1.n        5
+972     d1.c        'b'
+968     v           992
+
+5.) nichts?

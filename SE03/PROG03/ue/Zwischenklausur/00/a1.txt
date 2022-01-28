@@ -1,0 +1,7 @@
+##  1 ankreuzen kann das in die .h oder muss das in die .c Datei - 3p
+
+1. typedef struct ss;   .h
+2. struct s ss;         .c
+3. struct s;            .h
+4. struct s { int x; int y; } .c
+5. struct s \*ss           .c

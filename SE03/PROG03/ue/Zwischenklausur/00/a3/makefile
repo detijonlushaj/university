@@ -1,0 +1,1 @@
+GCC_ARGS= -Wall -pendatic-errors -std=c14

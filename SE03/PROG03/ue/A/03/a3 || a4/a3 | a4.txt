@@ -1,0 +1,10 @@
+3)
+Java: ja, weil jedes Element im Array einen eigenen Zeiger besitzt
+C: nein, weil wenn die Elemente im Array unterschiedlich groß sind, kann
+   man nicht korrekt bzw. rechnerisch indexieren  
+
+4)
+Java: 10*5*4 = 200 Byte für die Werte + 10*5*8 = 400 Byte für die jeweiligen Zeiger
+      der Elemente. Insgesamt 200 + 400 = 600 Byte
+C: 10*5*4 = 200 Byte für die Werte + 10*8 = 80 Byte für die jeweiligen Zeiger
+   des ersten Elementes eines Blocks

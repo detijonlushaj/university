@@ -1,0 +1,17 @@
+## 4 Ankreuzen ob wahr oder Falsch - 3p
+void foo(){
+    int local;
+    int *p = (int*) malloc(sizeof(int)); 
+}
+
+1. liegen \*p und local werte nebeneinander im Stack
+    *p liegt im heap
+
+2. rekursive Funktion, kann man anhand des Quelltextes ablesen wie groß der Stack wird.
+    //nein
+
+3. kann der Speicher des Programms voll laufen wenn man wiederholt foo aufruft
+    //irgendwann ja da wir den speicher nie frei geben und der ram begrenzt ist
+
+4. p zeigt auf einen Speicherblock im heap
+    //ja

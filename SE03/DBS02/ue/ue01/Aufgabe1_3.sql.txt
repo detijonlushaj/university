@@ -1,0 +1,51 @@
+-- DBS2.A1.3.a::
+-- Berechnen Sie die Summe aller Budgets (SUMME) sowie das minimale (MIN) und maximale Budget (MAX)
+-- für alle Filme des Jahres 1989, bei denen das Budget in USD angegeben ist. (1 Anfrage!).
+-- Hinweis: verwenden Sie ... like '%USD%' ...
+SELECT SUM(b.budget) AS SUMME, MIN(b.budget) AS MIN, MAX(b.budget) AS MAX
+FROM moviedb.movie m JOIN moviedb.budget b ON (m.id = b.movie) 
+WHERE m.year = 1989 AND currency_symbol LIKE '%USD%';
+
+-- DBS2.A1.3.b::
+-- Finden Sie die ID und Namen aller Personen, die sowohl Darsteller und als auch Regisseur sind.
+SELECT DISTINCT p.id, p.name
+FROM moviedb.plays pl
+JOIN moviedb.person p 	ON (p.id = pl.player)
+JOIN moviedb.directs di 	ON (di.director = pl.player);
+
+-- DBS2.A1.3.c::
+-- Finden Sie die ID und Namen aller Personen, die entweder Darsteller oder Regisseur, aber nicht beides sind.
+SELECT p.id, p.name
+   FROM moviedb.person p
+   Where p.id in (
+SELECT NVL(d.director, p.player) id
+FROM moviedb.directs d
+FULL OUTER JOIN moviedb.plays p ON (d.director = p.player) WHERE d.director IS NULL OR p.player IS NULL
+);
+
+-- DBS2.A1.3.d::
+-- Ermitteln Sie alle Genres (GENRENAME), die in Kinofilmen aus dem Jahr 1989 eingesetzt wurden
+-- zusammen mit der Anzahl von Kinofilmen (ANZAHL), in denen sie in dem Jahr verwendet wurden.
+-- (Jedes Genre sollte nur einmal auftauchen!).
+SELECT g.genre AS Genre_Name, count(*) AS Anzahl
+FROM moviedb.movie m JOIN moviedb.genre g ON (m.id = g.movie)
+WHERE m.YEAR = 1989 AND m.type = 'C'
+GROUP BY g.genre;
+
+-- DBS2.A1.3.e::
+-- Schränken Sie die Abfrage aus A1.3.d so ein, dass nur Genres aufgelistet werden,
+-- zu denen es in 1989 mindestens 100 Kinofilme gab.
+SELECT g.genre AS Genre_Name, count(*) AS Anzahl
+FROM moviedb.movie m JOIN moviedb.genre g ON (m.id = g.movie)
+WHERE m.YEAR = 1989 AND m.type = 'C'
+GROUP BY g.genre
+HAVING COUNT(*) >99 ;
+
+-- DBS2.A1.3.f::
+-- Die gleiche Anfrage wie in A1.3.d aber nach Häufigkeit absteigend sortiert.
+select g.genre, count(*)
+from moviedb.movie m join moviedb.genre g on (m.id = g.movie) where m.year = 1989 and m.type = 'C'
+group by g.genre
+order by count(*) desc;
+
+

@@ -1,0 +1,67 @@
+-- Log-Tabelle für Änderungen an der Movie-Tabelle anlegen
+create table movie_log (
+   id number,
+   ts date,
+   username varchar2(100),
+   log varchar2(2000),
+   
+   constraint pk_movie_log primary key (id)
+);
+/
+-- Sequenz für den Primärschlüssel der Log-Tabelle
+create sequence movie_log_seq;
+/
+-- Hilfsfunktion, die Titel, Jahr und Typ eines Films als einen String zusammenfasst
+create or replace function get_desc(title movie.title%type, year movie.year%type, type movie.type%type) return varchar is
+begin
+    return 'Titel: "' || title || '", Jahr: ' || year || ', Typ: "' || type || '"';
+end;
+/
+-- Test der Hilfsfunktion
+select get_desc(title, year, type) from movie m;
+/
+-- Trigger um Änderungen an der Movie-Tabelle zu protokollieren
+create or replace trigger trg_movie_log 
+after insert or update or delete on movie
+for each row
+declare
+    id movie_log.id%type;
+    ts movie_log.ts%type;
+    username movie_log.username%type;
+    log movie_log.log%type := '';
+    change movie_log.log%type;
+    movie_id movie.id%type;
+begin
+    select movie_log_seq.nextval into id from dual;
+    select sysdate into ts from dual;
+    select user into username from dual;
+    movie_id := nvl(:new.id, :old.id);
+    if inserting then
+        log := 'Datensatz ' || movie_id || ' wurde eingefügt: ' || get_desc(:new.title, :new.year, :new.type);
+    elsif deleting then
+        log := 'Datensatz ' || movie_id || ' wurde gelöscht: ' || get_desc(:old.title, :old.year, :old.type);
+    else
+        log := 'Datensatz ' || movie_id || ' wurde geändert: ' || get_desc(:old.title, :old.year, :old.type) || ' -> ' || get_desc(:new.title, :new.year, :new.type);
+    end if;
+    insert into movie_log values (id, ts, username, log);
+end;
+/
+-- Jetzt können Sie ihre GUI aufrufen und Änderungen vornehmen
+-- und dann das Logfile anzeigen:
+select * from movie_log;
+/
+-- 2. Teilaufgabe: Trigger, um eine Integritätsbedingung zu prüfen
+/
+create or replace trigger test_year
+after insert or update on movie
+for each row
+begin
+    if :new.type = 'C' and :new.year < 1870 then
+        RAISE_APPLICATION_ERROR (num => -20000, msg => 'Kinofilme nicht vor 1870!');
+    elsif :new.year < 1900 then
+        RAISE_APPLICATION_ERROR (num => -20001, msg => 'Sonstige Einträge nicht vor 1900!');
+    end if;
+end;
+/
+-- Versuchen Sie jetzt über die GUI Filme einzufügen, die der Bedingung widersprechen
+

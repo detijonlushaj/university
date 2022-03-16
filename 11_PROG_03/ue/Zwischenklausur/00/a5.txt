@@ -1,0 +1,11 @@
+start Adresse von der Matrix ist 7000 sizeof(int) ist 4
+
+```
+int matrix[10][3]
+```
+
+welche Adresse ist matrix[1]       
+
+matrix[1] nicht verwechseln mit matrix[1][0]
+
+//7012

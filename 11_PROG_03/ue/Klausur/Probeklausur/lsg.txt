@@ -1,0 +1,43 @@
+1.) ii.)
+2.) ii.)
+3.)
+A   -
+B   -
+C   static
+D   -
+E   static
+
+5.)
+1064    p           1052
+1060    m           99
+1056    z.z         4
+1052    z.y.y[0]    2
+1048    z.y.y[1]    3
+1044    z.y.x.x     1
+1040    
+
+6.)
+1064    m           99
+1060    z           98 --- ende main
+----------------------- anfang a
+1056    z           98
+1052    ii          88
+1048    p           1056    
+
+
+8.) c++ ja &S       java nein
+
+10.) ii.)
+
+11.) iii.)
+
+12.) AS0 BS | A+i   ACi     A+m     AS0 BS   A=m    A_C_m B=  A=m B= 
+
+14.) 
+Musterlösung:
+Der Standardkonstruktor von B ist private, so dass A(int i) diesen nicht aufrufen kann.
+
+Lösungsmöglichkeiten:
+- Den Standardkonstruktor in B public oder protected deklarieren 
+- Expliziter Aufruf des public-Basiskonstruktors in Zeile 08, z. B.:
+A(int i) : B(i) {}

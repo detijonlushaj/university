@@ -1,0 +1,27 @@
+3 Zeiger (3 Punkte)
+a. BetrachtenSiefolgendenCode:
+   void foo() {
+     int i = 6;
+    int* ip = &i;
+
+Welche der folgenden Aussagen ist korrekt?
+i. Der Zeiger ip verweist ins Heapsegment. 
+ii. Der Zeiger ip verweist ins Stacksegment.  ------ 
+iii. Der Zeiger ip verweist ins Datensegment. iv.Der Zeiger ip verweist ins Codesegment.
+
+b. Betrachten Sie folgenden Code in der main-Funktion eines C-Programms: 
+int i[] = { 5 };
+Welche Anweisung führt immer zur Ausgabe der Zahl 5: 
+i. printf("%d", *i); -------
+ii. printf("%d", &i);
+iii.printf("%d", i); 
+iv.printf("%d", i[1]);
+
+
+
+4 Präprozessor (1 Punkt)
+Welche Aufgabe hat der Präprozessor NICHT:
+i. Erzeugen von Header-Dateien  ------
+ii. Verarbeitung der #include-Direktive
+iii. Einlesen von Header-Dateien
+iv. Verarbeitungder#define-Direktive

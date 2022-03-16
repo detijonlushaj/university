@@ -1,0 +1,59 @@
+create or replace procedure dbs2_import_movies(p_title varchar2, p_type char, p_year number) authid current_user is
+  nextid number;
+begin
+
+  -- Genres werden immer komplett uebertragen
+  insert into dbs2_genre(genreid, genre)
+    select rownum, genre from (
+      select distinct genre 
+      from moviedb.genre
+      where genre not in (select genre from dbs2_genre)
+    );
+
+  -- bis zu 30 Filme, die den Selektionskriterien entsprechen,
+  -- in dbs2_movie eintragen. Nur Filme, die noch nicht existieren.
+  insert into dbs2_movie(movieid, title, year, type)
+   select id, title, year, type
+   from moviedb.movie
+   where upper(title) like '%' || upper(p_title) || '%' and (type = p_type or p_type is null) and (year = p_year or p_year is null)
+     and id not in (select movieid from dbs2_movie)
+     and rownum <= 30;
+
+  -- Alle Personen, die Filmen in is2_movie zugeordnet sind, eintragen.
+  -- Dabei wird geprueft, ob diese Personen schon existieren
+  insert into dbs2_person(personid, name, sex)
+     select id, name, sex
+     from moviedb.person where id in (
+       select p.player
+       from moviedb.plays p
+       where movie in (select movieid from dbs2_movie)
+         and player not in (select personid from dbs2_person)
+     );
+
+  -- Analog die fehlenden Charactere eintragen
+  -- Diese haben in der MovieDB keine ID, daher wird hier eine ID aus dbs2_ids genommen
+  insert into dbs2_movie_character(movcharid, movieid, playerid, character, alias, pos)
+   select dbs2_ids.nextval, movie, player, character, alias, pos
+   from moviedb.plays
+   where movie in (select movieid from dbs2_movie)
+     and movie not in (select movieid from dbs2_movie_character);
+
+  -- und die Zuordnungen der Movies zu den Genres
+  insert into dbs2_movie_genre(movieid, genreid)
+   select mg.movie, g.genreid
+   from moviedb.genre mg join dbs2_genre g on mg.genre = g.genre
+   where movie in (select movieid from dbs2_movie)
+     and movie not in (select movieid from dbs2_movie_genre);
+
+  -- Zum richtigen Einstellen der Sequenz die maximal verwendete ID ermitteln
+  select max(id)+1 into nextid from (
+    select max(movieid) id from dbs2_movie
+    union
+    select max(personid) id from dbs2_person
+  );
+
+  -- Sequenz passend einstellen (ich verwende nur eine Sequenz für alle IDs)
+  execute immediate 'drop sequence dbs2_ids';
+  execute immediate 'create sequence dbs2_ids start with ' || nextid;
+
+end;

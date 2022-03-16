@@ -1,0 +1,74 @@
+main(): text= HALLO WELT!
+main(): Adressbereich= 0x7fffa4e4addc-0x7fffa4e4ade7
+
+Adresse s: 0x7fffa4e4add0 & k: 0x7fffa4e4adb4
+
+sub():  63 (0x7fffa4e4ae0f): 00 
+sub():  62 (0x7fffa4e4ae0e): 00 
+sub():  61 (0x7fffa4e4ae0d): 7F 
+sub():  60 (0x7fffa4e4ae0c): FF �
+sub():  59 (0x7fffa4e4ae0b): A4 �
+sub():  58 (0x7fffa4e4ae0a): E4 �
+sub():  57 (0x7fffa4e4ae09): AE �
+sub():  56 (0x7fffa4e4ae08): E8 �
+sub():  55 (0x7fffa4e4ae07): 00 
+sub():  54 (0x7fffa4e4ae06): 00 
+sub():  53 (0x7fffa4e4ae05): 7F 
+sub():  52 (0x7fffa4e4ae04): 21 !
+sub():  51 (0x7fffa4e4ae03): 59 Y
+sub():  50 (0x7fffa4e4ae02): 4E N
+sub():  49 (0x7fffa4e4ae01): 26 &
+sub():  48 (0x7fffa4e4ae00): 20  
+sub():  47 (0x7fffa4e4adff): 00 
+sub():  46 (0x7fffa4e4adfe): 00 
+sub():  45 (0x7fffa4e4adfd): 7F 
+sub():  44 (0x7fffa4e4adfc): 21 !
+sub():  43 (0x7fffa4e4adfb): 59 Y
+sub():  42 (0x7fffa4e4adfa): 2D -
+sub():  41 (0x7fffa4e4adf9): 70 p
+sub():  40 (0x7fffa4e4adf8): B3 �
+sub():  39 (0x7fffa4e4adf7): 00 
+sub():  38 (0x7fffa4e4adf6): 00 
+sub():  37 (0x7fffa4e4adf5): 00 
+sub():  36 (0x7fffa4e4adf4): 00 
+sub():  35 (0x7fffa4e4adf3): 00 
+sub():  34 (0x7fffa4e4adf2): 00 
+sub():  33 (0x7fffa4e4adf1): 00 
+sub():  32 (0x7fffa4e4adf0): 00 
+sub():  31 (0x7fffa4e4adef): D4 �
+sub():  30 (0x7fffa4e4adee): AC �
+sub():  29 (0x7fffa4e4aded): B8 �
+sub():  28 (0x7fffa4e4adec): 36 6
+sub():  27 (0x7fffa4e4adeb): D5 �
+sub():  26 (0x7fffa4e4adea): BD �
+sub():  25 (0x7fffa4e4ade9): DF �
+sub():  24 (0x7fffa4e4ade8): 00 
+sub():  23 (0x7fffa4e4ade7): 00 
+sub():  22 (0x7fffa4e4ade6): 21 !
+sub():  21 (0x7fffa4e4ade5): 54 T
+sub():  20 (0x7fffa4e4ade4): 4C L
+sub():  19 (0x7fffa4e4ade3): 45 E
+sub():  18 (0x7fffa4e4ade2): 57 W
+sub():  17 (0x7fffa4e4ade1): 20  
+sub():  16 (0x7fffa4e4ade0): 4F O
+sub():  15 (0x7fffa4e4addf): 4C L
+sub():  14 (0x7fffa4e4adde): 4C L
+sub():  13 (0x7fffa4e4addd): 41 A
+sub():  12 (0x7fffa4e4addc): 48 H                       //endet stack speicher von main //8 Byte zur Ruecksprung adresse
+sub():  11 (0x7fffa4e4addb): 4F O
+sub():  10 (0x7fffa4e4adda): 21 !
+sub():   9 (0x7fffa4e4add9): 80 �
+sub():   8 (0x7fffa4e4add8): C0 �
+sub():   7 (0x7fffa4e4add7): 00 
+sub():   6 (0x7fffa4e4add6): 00 
+sub():   5 (0x7fffa4e4add5): 00 
+sub():   4 (0x7fffa4e4add4): 00                         //ueberschreibt alles 
+sub():   3 (0x7fffa4e4add3): 00 
+sub():   2 (0x7fffa4e4add2): 00                         
+sub():   1 (0x7fffa4e4add1): 00 
+sub():   0 (0x7fffa4e4add0): 00                         //struct angang (compiler denkt 4 Byte)
+main(): text= dolor sit amet, consetetur sadipscing elitr, sed di
+main(): Adressbereich= 0x7fffa4e4addc-0x7fffa4e4ae0f
+Ende main
+*** stack smashing detected ***: terminated
+Aborted (core dumped)

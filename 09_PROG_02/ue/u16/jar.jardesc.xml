@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="U16/Werkzeuge.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/U16/jar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" mainClassHandleIdentifier="=U16/src&lt;de.hsh.prog.werkzeuge{Main.java[Main" manifestLocation="/U16/Manifest.mf" manifestVersion="1.0" reuseManifest="false" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=U16/src"/>
+        <file path="/U16/Manifest.mf"/>
+        <file path="/U16/.classpath"/>
+        <folder path="/U16/docs"/>
+        <file path="/U16/.project"/>
+        <file path="/U16/jar.jardesc"/>
+        <folder path="/U16/doc"/>
+    </selectedElements>
+</jardesc>

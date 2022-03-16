@@ -1,0 +1,3 @@
+Die Padding Bytes werden fuers fuellen der struct benoetigt damit das Alignment erfuellt werden kann.
+Das bedeutet damit steigt die Prozessorperformace wenn der gesuchte typ durch seine sizeof(typ) teilbar ist.
+Um um dies moeglich zu machen brauchen wir padding bytes.

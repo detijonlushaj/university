@@ -1,0 +1,8 @@
+1a.)
+Das Programm soll mit folgendem Kommando in ein ausführbares Programm überführt werden:
+gcc -std=c99 –pedantic-errors -Wall b.c
+    - Es fehlt die a.c die mit compiliert werden muss um es zu linken
+
+b.) unknow definition of a(void);
+
+c.) gcc -std=c99 –pedantic-errors -Wall b.c a.c

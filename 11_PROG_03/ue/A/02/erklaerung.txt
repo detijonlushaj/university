@@ -1,0 +1,23 @@
+1b) 
+Welcher der drei Übersetzungsphasen ist die Meldung zuzuordnen?
+=> linken
+Erläutern Sie die Ursache der Fehlermeldung
+=> summe.c & differenz.c inkludieren input.h. Problem - get_input wird 2 mal definiert
+   & der linker erkennt das und gibt eine Fehlermeldung aus  
+
+4)
+Makefile:
+program: m.o f.o g.o
+   gcc -o prog m.o f.o g.o    => prog zu program
+
+f.o: g.h                      => und f.c
+   gcc f.c                    => und -c
+
+g.o: stdio.h                  => stdio.h wird in der Regel nicht verändert und g.c hinzufügen
+   gcc g.c                    => gcc -c g.c
+   
+m.o: f.h g.h                  => und m.c
+   gcc m.c                    => gcc -c m.c
+
+m.c: f.h g.h                  => kompletter Block entfernen
+   gcc -o m.c               

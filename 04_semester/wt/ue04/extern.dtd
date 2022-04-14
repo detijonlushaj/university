@@ -1,0 +1,12 @@
+<!ELEMENT module (Titel, Veranstaltungsart, SWS, Credits, Praesensstunden, Selbststudium, Studiensemester, 
+                    empfohlene_Voraussetungen*, Stunden-Pruefungsleistungen+, angestrebte_Lernergebnisse+)>
+<!ELEMENT Titel (#PCDATA)>
+<!ELEMENT Veranstaltungsart (#PCDATA)>
+<!ELEMENT SWS (#PCDATA)>
+<!ELEMENT Credits (#PCDATA)>
+<!ELEMENT Praesensstunden (#PCDATA)>
+<!ELEMENT Selbststudium (#PCDATA)>
+<!ELEMENT Studiensemester (#PCDATA)>
+<!ELEMENT empfohlene_Voraussetungen (#PCDATA)>
+<!ELEMENT Stunden-Pruefungsleistungen (#PCDATA)>
+<!ELEMENT angestrebte_Lernergebnisse (#PCDATA)>

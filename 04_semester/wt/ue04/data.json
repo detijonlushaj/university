@@ -1,0 +1,28 @@
+{
+    "module":[
+        { 
+            "Titel": "Modul BIN-203/MDI-203 Webtechnologien",
+            "Veranstaltungsart": "Vorlesung mit Uebung",
+            "SWS": "4 SWS",
+            "credits": 6,
+            "Präsenzstunden":  68,
+            "Selbststudium": 112,
+            "Studiensemester": 4,
+            "empfohlene_Voraussetungen": [
+                "Programmieren 1-3",
+                "Betriebssysteme und Netze",
+                "Englisch"
+            ],
+            "Stunden-Pruefungsleistungen": [
+                "Pruefung (Klausur oder muendliche Prüfung", 
+                "experimentelle Arbeit"
+            ],
+            "angestrebte_Lernergebnisse": [
+                "Technologische Kompetenz Kennenlernen der grundlegenden Komponenten webbasiert Systeme, Verständnis über das Zusammenspiel dieser Komponenten auf Basis verschiedener Protokolle.",
+                "Design-Kompetenz Websysteme entwerfen und benutzergerecht gestalten können. Auswahl und Anwendung geeigneter Architekturmuster.",
+                "Realisierungs-Kompetenz komplexe Websysteme mithilfe aktueller Technologien entwickeln und konfigurieren können."
+            ]
+        }
+
+    ]
+}

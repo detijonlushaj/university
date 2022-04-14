@@ -1,0 +1,6 @@
+de/hsh/pizza/JAXRSApplication.class
+de/hsh/pizza/PizzaSize.class
+de/hsh/pizza/Bestellung.class
+de/hsh/pizza/Pizza.class
+de/hsh/pizza/BestellungenResource.class
+de/hsh/pizza/BestellungRepository.class

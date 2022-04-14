@@ -1,0 +1,62 @@
+* {
+    color: white;
+    background-color:#252629;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-size: 3rem;
+    color:deepskyblue;
+}
+
+h1.tiny{
+    font-size: 2rem;
+    color: aqua;
+}
+
+table, td, th {
+    border: thin solid #a0a0a0;
+    font-style: italic;
+    text-align:center;
+    padding: .2em .5em;
+    border-radius: .1em;  
+}
+
+ol {
+    list-style-type:lower-roman;
+    font-size: 1rem;
+}
+
+span { 
+    padding: 15px 0px 15px 0px; 
+}
+
+.feedback-input {
+    font-size: 12px;
+    border:2px solid deepskyblue;
+    padding: 10px;
+}
+  
+.feedback-input:focus { 
+    border:2px solid #ffffff; 
+}
+  
+  
+[type="submit"] {
+    background: deepskyblue;
+    border-radius:5px;
+    border:0;
+    font-size:12px;
+    padding: 10px;
+}
+
+[type="submit"]:hover { 
+    background:#3a3636; 
+}
+
+a:hover{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: deepskyblue;
+
+}

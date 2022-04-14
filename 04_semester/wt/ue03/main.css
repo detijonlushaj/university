@@ -1,0 +1,22 @@
+* {
+    color: white;
+    background-color:#252629;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    font-size: 2rem;
+    color: deepskyblue;
+}
+
+
+span { 
+    padding: 15px 0px 15px 0px; 
+}
+
+a:hover{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: deepskyblue;
+
+}

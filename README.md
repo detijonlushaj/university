@@ -12,5 +12,6 @@ In dem Ordner findet man für alle Fächer die ich in meinem Stuidum belegt habe
                                         Betriebssysteme und Netzwerke, 
                                         Computergrafik und technische Anwendungen
     ```
+    ### Studieninhalte - Angewandte Informatik (BIN)
 
     ![Studieninhalte](assets/BIN_Curriculum.png)

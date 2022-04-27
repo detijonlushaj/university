@@ -8,7 +8,9 @@ In dem Ordner findet man für alle Fächer die ich in meinem Stuidum belegt habe
     ```
     Abchluss:       Bachelor of Science (B.Sc.)
     Fächergruppe:   Informatik, MINT
-    Vertiefungen / Studienschwerpunkte:  Software Engineering und Informationssysteme, Betriebssysteme und Netzwerke, Computergrafik und technische Anwendungen
+    Vertiefungen / Studienschwerpunkte: Software Engineering und Informationssysteme, 
+                                        Betriebssysteme und Netzwerke, 
+                                        Computergrafik und technische Anwendungen
     ```
 
     ![Studieninhalte](assets/BIN_Curriculum.png)
